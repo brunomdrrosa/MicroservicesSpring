@@ -8,6 +8,7 @@ public class CurrencyExchange {
     private String from;
     private String to;
     private BigDecimal conversionMultiple;
+    private String enviromnent;
 
     public CurrencyExchange() {
     }
@@ -50,4 +51,13 @@ public class CurrencyExchange {
     public void setConversionMultiple(BigDecimal conversionMultiple) {
         this.conversionMultiple = conversionMultiple;
     }
+
+    public String getEnviromnent() {
+        return enviromnent;
+    }
+
+    public void setEnviromnent(String enviromnent) {
+        this.enviromnent = enviromnent;
+    }
+
 }

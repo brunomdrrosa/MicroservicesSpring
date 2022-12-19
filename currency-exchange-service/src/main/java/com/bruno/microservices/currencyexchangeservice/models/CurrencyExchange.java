@@ -1,14 +1,24 @@
 package com.bruno.microservices.currencyexchangeservice.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
+@Entity
 public class CurrencyExchange {
 
+    @Id
     private Long id;
+
+    @Column(name = "currency_from")
     private String from;
+
+    @Column(name = "currency_to")
     private String to;
+
     private BigDecimal conversionMultiple;
-    private String enviromnent;
+    private String environment;
 
     public CurrencyExchange() {
     }
@@ -52,12 +62,12 @@ public class CurrencyExchange {
         this.conversionMultiple = conversionMultiple;
     }
 
-    public String getEnviromnent() {
-        return enviromnent;
+    public String getEnvironment() {
+        return environment;
     }
 
-    public void setEnviromnent(String enviromnent) {
-        this.enviromnent = enviromnent;
+    public void setEnvironment(String environment) {
+        this.environment = environment;
     }
 
 }
